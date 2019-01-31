@@ -9,7 +9,23 @@ public class Calculator {
     }
   }
 
-  public void addition() {
+  public int plus(int a, int b) {
+    return a + b;
+  }
+
+  public int minus(int a, int b) {
+    return a - b;
+  }
+
+  public int multiply(int a, int b) {
+    return a * b;
+  }
+
+  public int divide(int a, int b) {
+    return a / b;
+  }
+
+/*  public void addition() {
     System.out.println("Это операция сложения");
   }
 
@@ -23,5 +39,5 @@ public class Calculator {
 
   public void division() {
     System.out.println("Это операция деления");
-  }
+  }*/
 }
