@@ -3,6 +3,7 @@ package hw1;
 public class Main {
   public static void main(String[] args) {
     Calculator calculator = new Calculator();
+    System.out.println("Остаток после деления: " + calculator.checkThree(3));
     calculator.checkThree(3);
 
     System.out.println("Это операция сложения. Результат сложения равен " + calculator.plus(3, 5));

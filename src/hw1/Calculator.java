@@ -1,11 +1,11 @@
 package hw1;
 
 public class Calculator {
-  public void checkThree(int a) {
+  public boolean checkThree(int a) {
     if (a % 3 == 0) {
-      System.out.println("true");
+      return true;
     } else {
-      System.out.println("false");
+      return false;
     }
   }
 
