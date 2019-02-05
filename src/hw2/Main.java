@@ -19,5 +19,6 @@ public class Main {
         System.out.println("Введите второе число:");
         int b = Integer.parseInt(reader.readLine());
         System.out.println(calculator.operations(a, b, operation));
+        reader.close();
     }
 }
