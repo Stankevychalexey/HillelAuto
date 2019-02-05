@@ -1,55 +1,27 @@
 package hw2;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import static hw2.Operations.*;
 
 public class Calculator {
-  public static void main(String[] args) {
-  }
 
-  public void operations() throws IOException {
-    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-    System.out.println("Введите первое число:");
-    int a = Integer.parseInt(reader.readLine());
-    System.out.println("Введите операцию (+, -, / или *):");
-    String operations = reader.readLine();
-    System.out.println("Введите второе число:");
-    int b = Integer.parseInt(reader.readLine());
+  public int operations(int a, int b, String operation) {
 
-    switch (operations) {
+    switch (operation) {
       case "+":
-        System.out.println("Результат сложения равен " + plus(a, b));
-        break;
+        return plus(a, b);
+
       case "-":
-        System.out.println("Результат вычитания равен " + minus(a, b));
-        break;
+        return minus(a, b);
+
       case "/":
-        System.out.println("Результат деления равен " + divide(a, b));
-        break;
+        return divide(a, b);
+
       case "*":
-        System.out.println("Результат умножения равен " + multiply(a, b));
-        break;
+        return multiply(a, b);
+
       default:
         System.out.println("Что-то пошло не так...");
-        break;
+        return 0;
     }
-    reader.close();
-  }
-
-  public int plus(int a, int b) {
-    return a + b;
-  }
-
-  public int minus(int a, int b) {
-    return a - b;
-  }
-
-  public int multiply(int a, int b) {
-    return a * b;
-  }
-
-  public int divide(int a, int b) {
-    return a / b;
   }
 }
