@@ -12,14 +12,13 @@ public class Main {
     public static void main(String[] args) throws IOException {
         Calculator calculator = new Calculator();
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Введите первое число:");
+        System.out.println("Введите первую цифру:");
         int a = Integer.parseInt(reader.readLine());
         System.out.println("Введите операцию (+, -, / или *):");
         String operation = reader.readLine();
-        System.out.println("Введите второе число:");
+        System.out.println("Введите вторую цифру:");
         int b = Integer.parseInt(reader.readLine());
         System.out.println(calculator.operations(a, b, operation));
         reader.close();
-
     }
 }
