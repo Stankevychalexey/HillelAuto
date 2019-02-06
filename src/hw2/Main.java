@@ -20,5 +20,6 @@ public class Main {
         int b = Integer.parseInt(reader.readLine());
         System.out.println(calculator.operations(a, b, operation));
         reader.close();
+
     }
 }
