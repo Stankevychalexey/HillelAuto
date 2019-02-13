@@ -1,14 +1,14 @@
 package warmup1;
 
 public class EndUp {
-  public String endUp(String str) {
-    if (str.length() <= 3) return str.toUpperCase();
-    int cut = str.length() - 3;
-    String front = str.substring(0, cut);
-    String back  = str.substring(cut);  // this takes from cut to the end
+    public String endUp(String str) {
+        if (str.length() <= 3) return str.toUpperCase();
+        int cut = str.length() - 3;
+        String front = str.substring(0, cut);
+        String back = str.substring(cut);  // this takes from cut to the end
 
-    return front + back.toUpperCase();
-  }
+        return front + back.toUpperCase();
+    }
 }
 
 /* Description:
@@ -20,3 +20,16 @@ public class EndUp {
   endUp("hi there") → "hi thERE"
   endUp("hi") → "HI"
 */
+
+
+/*
+public class EndUp {
+  public String endUp(String str) {
+    if (str.length() <= 3) return str.toUpperCase();
+    int cut = str.length() - 3;
+    String front = str.substring(0, cut);
+    String back  = str.substring(cut);  // this takes from cut to the end
+
+    return front + back.toUpperCase();
+  }
+}*/

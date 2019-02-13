@@ -1,10 +1,10 @@
 package warmup1;
 
 public class BackAround {
-  public String backAround(String str) {
-    return str.charAt(str.length() - 1) + str + str.charAt(str.length() - 1);
-    // charAt() возвращает символ строки по индексу;
-  }
+    public String backAround(String str) {
+        return str.charAt(str.length() - 1) + str + str.charAt(str.length() - 1);
+        // charAt() возвращает символ строки по индексу;
+    }
 }
 
 /* Description:
@@ -15,3 +15,5 @@ public class BackAround {
   backAround("Hello") → "oHelloo"
   backAround("a") → "aaa"
 */
+
+
