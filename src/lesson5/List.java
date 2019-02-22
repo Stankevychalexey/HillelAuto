@@ -18,12 +18,21 @@ public class List {
     public static void secondTask(){
         ArrayList<Integer> secondTask = new ArrayList<>(firstCollection);
         System.out.println("Second collection" + secondTask);
+
+
+
+
+        HashSet<String> planets = new HashSet<>();
+        planets.add("Mercury");
+        planets.add("Earth");
+        planets.add("Venus");
+        planets.add("Saturn");
+        planets.add("Neptune");
+        planets.add("Venus");
+        System.out.println(planets);
     }
 
-    public static void thirdTask(){
-        Set<Integer> set = new HashSet<>();
 
-    }
 }
 
 
