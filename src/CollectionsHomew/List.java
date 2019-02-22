@@ -98,16 +98,9 @@ public class List {
 
     // З) найдите указанное число в массиве (например 7). В случае, если указанного числа нет- выводите сообщение об ошибке.
     System.out.print("\nНайти число 7: ");
-    if (firstCollection.contains(7)){
+    if (firstCollection.contains(7)) {
       System.out.println("7");
     }
-      System.out.println("Заданное число отсутствует");
+    System.out.println("Заданное число отсутствует");
   }
 }
-
-
-
-/*
-  Integer[] arr = {0, 7, 4, 3, 9, 8, 5};
-  Set sort = new TreeSet(Arrays.asList(arr));
-    System.out.println("Сортировка: " + sort);*/
