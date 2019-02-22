@@ -98,12 +98,10 @@ public class List {
 
     // З) найдите указанное число в массиве (например 7). В случае, если указанного числа нет- выводите сообщение об ошибке.
     System.out.print("\nНайти число 7: ");
-    for (int i = 0; i < firstCollection.size(); i++) {
-      if (firstCollection.get(i) == 7) {
-        System.out.println("7");
-      }
+    if (firstCollection.contains(7)){
+      System.out.println("7");
     }
-    System.out.println("Заданное число отсутствует");
+      System.out.println("Заданное число отсутствует");
   }
 }
 
