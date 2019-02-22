@@ -17,6 +17,7 @@ public class List {
     ArrayList<Integer> secondTask = new ArrayList<>(firstCollection);
     System.out.println("\nSecond collection" + secondTask);
 
+
     // Б) определите уникальные числа:
     Set sorted = new TreeSet(firstCollection);
     System.out.println("\nСортировка уникальных значений через TreeSet: " + sorted);
@@ -27,6 +28,16 @@ public class List {
     // В) определите количество каждого уникального числа:
     Set<Integer> uniqueSet = new HashSet<>(firstCollection);
     System.out.println("\nОпределение количества уникальных чисел: " + uniqueSet.size());
+
+    ArrayList<Integer> uniqueNumberQuantity = new ArrayList<>(firstCollection);
+    HashMap<Integer, Integer> hm = new HashMap<Integer, Integer>();
+    Integer am;
+    for (Integer i : uniqueNumberQuantity) {
+      am = hm.get(i);
+      hm.put(i, am == null ? 1 : am + 1);
+    }
+    System.out.println("Количество каждого уникального числа в коллекции: " + hm);
+
 
     // Г) отсортируйте коллекцию:
     Collections.sort(firstCollection);
@@ -45,39 +56,54 @@ public class List {
 
 
     // Е) создайте коллекцию, содержащую все положительные числа первой коллекции:
-    System.out.println("\nПоложительные числа числа:");
+    System.out.print("\nПоложительные числа: ");
     for (int value : firstCollection) {
       if (value >= 0) {
-        System.out.print(value + ", ");
+        System.out.print(value + " ");
       }
     }
 
-    System.out.println("\nОтрицательные числа:");
+    System.out.print("\nОтрицательные числа: ");
     for (int value : firstCollection) {
       if (value < 0) {
-        System.out.print(value + ", ");
+        System.out.print(value + " ");
+      } else if (value >= 0) {
       }
     }
-
+    System.out.println("Отрицательные числа отсутствуют");
 
     System.out.print("\nВсе чётные числа коллекции: ");
     for (int i = 0; i < firstCollection.size(); i++) {
       int even = firstCollection.get(i) % 2;
       if (even == 0) {
-        System.out.print(firstCollection.get(i) + ", "); // выведет каждое число с новой строки;
         // firstCollection.remove(i); // если оставить эту строку, то выведуться числа без повторов;
+        System.out.print(firstCollection.get(i) + " "); // выведет каждое число с новой строки;
       }
     }
 
     System.out.print("\nВсе нечётные числа коллекции: ");
-    for (int k = 0; k < firstCollection.size(); k++) {
-      int odd = firstCollection.get(k) % 2;
-      if (odd != 0) {
-        System.out.print(firstCollection.get(k) + ", "); // выведет каждое число с новой строки;
+    for (int i = 0; i < firstCollection.size(); i++) {
+      int even = firstCollection.get(i) % 2;
+      if (even != 0) {
         // firstCollection.remove(i); // если оставить эту строку, то выведуться числа без повторов;
+        System.out.print(firstCollection.get(i) + " "); // выведет каждое число с новой строки;
       }
     }
+    System.out.println("\n");
 
+
+    // Ж) удалите из первой коллекции все нечетные числа:
+    System.out.println("Удалить все нечетные числа из коллекции: ");
+
+
+    // З) найдите указанное число в массиве (например 7). В случае, если указанного числа нет- выводите сообщение об ошибке.
+    System.out.print("\nНайти число 7: ");
+    for (int i = 0; i < firstCollection.size(); i++) {
+      if (firstCollection.get(i) == 7) {
+        System.out.println("7");
+      }
+    }
+    System.out.println("Заданное число отсутствует");
   }
 }
 
