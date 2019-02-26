@@ -7,25 +7,25 @@ public class List {
   static ArrayList<Integer> firstCollection = new ArrayList<>();
 
   public static void homeTasksCollections() {
-    // Сгенерируйте коллекцию целых чисел, используя класс Random(). Используя методы классов-коллекций:
+    System.out.print("\nСгенерируйте коллекцию целых чисел, используя класс Random(). Используя методы классов-коллекций:");
     for (int i = 0; i < 20; i++) {
       firstCollection.add((int) Math.round(Math.random() * 30) + 15);
     }
     System.out.println("\nFirst collection" + firstCollection);
 
-    // А) создайте новую коллекцию, переписав в нее элементы из первой коллекции:
+    System.out.print("\nА) создайте новую коллекцию, переписав в нее элементы из первой коллекции:");
     ArrayList<Integer> secondTask = new ArrayList<>(firstCollection);
     System.out.println("\nSecond collection" + secondTask);
 
 
-    // Б) определите уникальные числа:
+    System.out.print("\nБ) Определите уникальные числа:");
     Set sorted = new TreeSet(firstCollection);
     System.out.println("\nСортировка уникальных значений через TreeSet: " + sorted);
 
     Set<Integer> set = new HashSet<>(firstCollection);
     System.out.println("Сортировка уникальных значений через HashSet: " + set);
 
-    // В) определите количество каждого уникального числа:
+    System.out.print("\nВ) определите количество каждого уникального числа:");
     Set<Integer> uniqueSet = new HashSet<>(firstCollection);
     System.out.println("\nОпределение количества уникальных чисел: " + uniqueSet.size());
 
@@ -38,15 +38,14 @@ public class List {
     }
     System.out.println("Количество каждого уникального числа в коллекции: " + hm);
 
-
-    // Г) отсортируйте коллекцию:
+    System.out.print("\nГ) отсортируйте коллекцию:");
     Collections.sort(firstCollection);
     System.out.println("\nСортировка всей коллекции: " + firstCollection);
 
     Collections.sort(firstCollection, Collections.reverseOrder());
     System.out.println("Сортировка всей коллекции в обратном порядке: " + firstCollection);
 
-    // Д) найдите макс, мин и сумму чисел коллекции:
+    System.out.print("\nД) найдите макс, мин и сумму чисел коллекции:");
     System.out.println("\nМинимальное число: " + Collections.min(firstCollection));
     System.out.println("Минимальное число: " + Collections.max(firstCollection));
     int sum = 0;
@@ -55,7 +54,7 @@ public class List {
     System.out.println("Сумма всех чисел коллекции: " + sum);
 
 
-    // Е) создайте коллекцию, содержащую все положительные числа первой коллекции:
+    System.out.print("\nЕ) создайте коллекцию, содержащую все положительные числа первой коллекции:");
     System.out.print("\nПоложительные числа: ");
     for (int value : firstCollection) {
       if (value >= 0) {
@@ -91,12 +90,13 @@ public class List {
     }
     System.out.println("\n");
 
-
-    // Ж) удалите из первой коллекции все нечетные числа:
+    System.out.print("\nЖ) удалите из первой коллекции все нечетные числа:");
     System.out.println("Удалить все нечетные числа из коллекции: ");
+    ArrayList<Integer> evenList = new ArrayList<>(firstCollection);
+    evenList.removeIf(i -> (i % 2 != 0));
+    System.out.println("Even list: " + evenList); // even
 
-
-    // З) найдите указанное число в массиве (например 7). В случае, если указанного числа нет- выводите сообщение об ошибке.
+    System.out.print("\nЗ) найдите указанное число в массиве (например 7). В случае, если указанного числа нет- выводите сообщение об ошибке.");
     System.out.print("\nНайти число 7: ");
     if (firstCollection.contains(7)) {
       System.out.println("7");
