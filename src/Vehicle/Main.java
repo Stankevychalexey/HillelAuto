@@ -9,7 +9,7 @@ public class Main {
     System.out.println(fordFocus.getModel());
     fordFocus.wheelQuantity();
 
-
+    fordFocus.gas();
 
 
   }
