@@ -2,23 +2,51 @@ package Vehicle;
 
 public abstract class Car implements Vehicle {
 
-  String name;
-  int year;
+  private String model;
+  private String color;
+  private int maxSpeed;
+  private String number;
 
-  public Car(String name, int year) {
-    this.name = name;
-    this.year = year;
+  public Car(String model, String color, int maxSpeed, String number) {
+    this.model = model;
+    this.color = color;
+    this.maxSpeed = maxSpeed;
+    this.number = number;
   }
 
-  public void openDoor() {
-    System.out.println("Car opendoor");
+  public final void wheelQuantity() {
+    System.out.println("This car has 4 wheels");
   }
 
-  public void blockWindows() {
-    System.out.println("Car blockwindow");
+  public String getModel() {
+    return model;
   }
 
-  public Car() {
-    int passengers = 5;
+  public void setModel(String model) {
+    this.model = model;
+  }
+
+  public String getColor() {
+    return color;
+  }
+
+  public void setColor(String color) {
+    this.color = color;
+  }
+
+  public int getMaxSpeed() {
+    return maxSpeed;
+  }
+
+  public void setMaxSpeed(int maxSpeed) {
+    this.maxSpeed = maxSpeed;
+  }
+
+  public String getNumber() {
+    return number;
+  }
+
+  public void setNumber(String number) {
+    this.number = number;
   }
 }

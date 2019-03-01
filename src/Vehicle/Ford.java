@@ -2,28 +2,28 @@ package Vehicle;
 
 public class Ford extends Car {
 
-  String color;
+  public Ford(String model, String color, int maxSpeed, String number) {
+  super(model, color, maxSpeed, number);
+  }
+
+
+  @Override
+  public void gas() {
+    System.out.println("Ford starts to go");
+  }
+
+  @Override
+  public void brake() {
+    System.out.println("Ford starts to brake");
+  }
 
   @Override
   public void openDoor() {
-    System.out.println("Ford opendoor");
+    System.out.println("Ford's doors open");
   }
 
   @Override
   public void blockWindows() {
-    System.out.println("Ford block windows");
-  }
-
-  public Ford(String name, int year, String color) {
-    super(name, year);
-    this.color = color;
-  }
-
-  public String getColor() {
-    return color;
-  }
-
-  public void setColor(String color) {
-    this.color = color;
+    System.out.println("Ford's windows blocked");
   }
 }
