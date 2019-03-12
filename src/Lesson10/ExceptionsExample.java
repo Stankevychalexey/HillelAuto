@@ -68,15 +68,15 @@ public class ExceptionsExample {
     public void error() {
         try {
             Object x = null;
-        } catch (Error error){
+        } catch (Error error) {
             throw new Error();
         }
     }
 
     public void runtimeException() throws Exception {
-        try{
+        try {
             throw new RuntimeException();
-        } catch (RuntimeException e){
+        } catch (RuntimeException e) {
             System.out.println("RuntimeException");
         }
     }
