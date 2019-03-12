@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="1.5" y="80.0">ClassesTest.Figure</node>
+    <node x="4.5" y="240.0">ClassesTest.Main</node>
+    <node x="6.0" y="0.0">ClassesTest.Inter</node>
+    <node x="0.0" y="160.0">ClassesTest.Square</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="ClassesTest.Figure" target="ClassesTest.Inter">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="ClassesTest.Main" target="ClassesTest.Square">
+      <point x="-18.75" y="-15.0" />
+      <point x="23.25" y="215.0" />
+      <point x="21.0" y="215.0" />
+      <point x="-21.0" y="15.0" />
+    </edge>
+    <edge source="ClassesTest.Square" target="ClassesTest.Figure">
+      <point x="-21.0" y="-15.0" />
+      <point x="-20.25" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="0.0" y="0.0" />
+  <SelectedNodes>
+    <node>ClassesTest.Main</node>
+    <node>ClassesTest.Figure</node>
+    <node>ClassesTest.Inter</node>
+    <node>ClassesTest.Square</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

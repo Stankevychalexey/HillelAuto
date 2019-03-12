@@ -6,6 +6,17 @@ public class Ford extends Car {
   super(model, color, maxSpeed, number);
   }
 
+  public Ford(String model, String number) {
+    super(model, number);
+  }
+
+  public Ford() {
+  }
+
+  @Override
+  public void setColor(CarColor red) {
+
+  }
 
   @Override
   public void gas() {

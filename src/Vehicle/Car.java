@@ -14,6 +14,15 @@ public abstract class Car implements Vehicle {
     this.number = number;
   }
 
+  public Car(String model, String number){
+    this.model = model;
+    this.number = number;
+  }
+
+  public Car(){
+
+  }
+
   public final void wheelQuantity() {
     System.out.println("This car has 4 wheels");
   }
@@ -28,10 +37,6 @@ public abstract class Car implements Vehicle {
 
   public String getColor() {
     return color;
-  }
-
-  public void setColor(String color) {
-    this.color = color;
   }
 
   public int getMaxSpeed() {
@@ -49,4 +54,6 @@ public abstract class Car implements Vehicle {
   public void setNumber(String number) {
     this.number = number;
   }
+
+  public abstract void setColor(CarColor red);
 }
