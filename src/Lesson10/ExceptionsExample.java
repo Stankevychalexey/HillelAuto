@@ -1,10 +1,12 @@
 package Lesson10;
 
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class ExceptionsExample {
   private ABC abc;
 
-  // RuntimeException: ArithmeticException, MyNullPointerException, IndexOutOfBoundsException
-  public void ArithmeticException() {
+  public void arithmeticException() {
     try {
       int a = 0;
       int b = 5;
@@ -17,7 +19,7 @@ public class ExceptionsExample {
     }
   }
 
-  public void NullPointerException() {
+  public void nullPointerException() {
     try {
       abc.show();
     } catch (NullPointerException e) {
@@ -25,7 +27,7 @@ public class ExceptionsExample {
     }
   }
 
-  public void MyNullPointerException() {
+  public void myNullPointerException() {
     try {
       throw new NullPointerException("My Exception");
     } catch (NullPointerException e) {
@@ -33,12 +35,33 @@ public class ExceptionsExample {
     }
   }
 
-  public void IndexOutOfBoundsException() {
+  public void indexOutOfBoundsException() {
     try {
       int[] arr = {1, 2, 3, 4};
       arr[5] = 7;
     } catch (ArrayIndexOutOfBoundsException e) {
       System.out.println("IndexOutOfBoundsException. Вылез за границу массива");
+    }
+  }
+
+  public void inputMismatchException(){
+    Scanner scanner = new Scanner(System.in);
+    try {
+      System.out.print("Enter an integer: ");
+      int number = scanner.nextInt();
+      System.out.println("The number entered is " + number);
+    } catch (InputMismatchException ex) {
+      System.out.println("Incorrect input: an integer is required");
+    }
+  }
+
+  public void runtime(){
+    try {
+      throw new RuntimeException();
+    } catch (Exception e) {
+      System.exit(0);
+    } finally {
+      System.out.println("Please, let me print this.");
     }
   }
 }
