@@ -2,6 +2,17 @@ package Vehicle;
 
 public class Ford extends Car {
 
+  class InnerFord{
+    public void beep(){
+      System.out.println("Ford is beeping");
+    }
+  }
+
+  public static void main(String[] args) {
+    Ford.InnerFord beep = new Ford().new InnerFord();
+    beep.beep();
+  }
+
   public Ford(String model, String color, int maxSpeed, String number) {
   super(model, color, maxSpeed, number);
   }

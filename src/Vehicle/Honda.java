@@ -2,6 +2,17 @@ package Vehicle;
 
 public class Honda extends Car {
 
+  class InnerHonda{
+    public void headlights(){
+      System.out.println("Honda turns on the headlights");
+    }
+  }
+
+  public static void main(String[] args) {
+    Honda.InnerHonda headlights = new Honda().new InnerHonda();
+    headlights.headlights();
+  }
+
   public Honda(String model, String color, int maxSpeed, String number) {
     super(model, color, maxSpeed, number);
   }
